@@ -1,0 +1,93 @@
+:root {
+    --background-light: #f4f4f4;
+    --background-dark: #333;
+    --text-light: #333;
+    --text-dark: #f4f4f4;
+    --primary: #0c0fca;
+    --primary-hover: #0512c7;
+    --link-hover: #0404d8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+#container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+body.dark-mode #container {
+    background: #444;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.section-content {
+    font-size: 1em;
+    color: #000;
+}
+
+#toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 0.8em; /* Smaller font size */
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#toggle-button:hover {
+    background-color: var(--primary-hover);
+}
+
+#toggle-button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
